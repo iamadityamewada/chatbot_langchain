@@ -30,4 +30,4 @@ ouput_parser = StrOutputParser()
 chain = prompt|llm|ouput_parser
 
 if input_text:
-    st.write(chain.invoke({question:input_text}))
+    st.write(chain.invoke("question:{input_text}"))
